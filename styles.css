@@ -1,0 +1,170 @@
+/* Base Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  font-family: 'Inter', sans-serif;
+  background: #f7fafc;
+  color: #222;
+}
+
+/* Hero Section */
+.hero {
+  background: url('https://placehold.co/1200x600?text=Hero+Image') no-repeat center center/cover;
+  height: 70vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.35);
+  height: 100%;
+  width: 100%;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+header .logo {
+  width: 150px;
+  margin-bottom: 2rem;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+main h1 {
+  font-size: 2.5rem;
+  max-width: 600px;
+  color: #FFC800;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.subtitle {
+  color: #fff;
+  font-size: 1.2rem;
+  text-align: center;
+  max-width: 500px;
+}
+
+.cta {
+  color: #1D3557;
+  font-size: 1.2rem;
+  text-decoration: none;
+  font-weight: bold;
+  background: #fff;
+  border: 2px solid #FFC800;
+  border-radius: 6px;
+  padding: 12px 32px;
+  margin-top: 1rem;
+  transition: background 0.3s, color 0.3s;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.cta:hover {
+  background: #FFC800;
+  color: #1D3557;
+}
+
+/* Impact Section */
+.impact {
+  background: #fff;
+  padding: 3rem 1rem;
+  text-align: center;
+}
+.impact h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #1D3557;
+}
+.impact-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+.card {
+  background: #f7fafc;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  padding: 2rem 1.5rem;
+  width: 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.card img {
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+.card h3 {
+  color: #FFC800;
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+.card p {
+  color: #333;
+  font-size: 1rem;
+}
+
+/* Fade-in Animations */
+.fade-in {
+  opacity: 0;
+  transform: translateY(10px);
+  animation: fadeInUp 1s forwards;
+}
+.delay-1 { animation-delay: 0.3s; }
+.delay-2 { animation-delay: 0.6s; }
+.delay-3 { animation-delay: 0.9s; }
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+footer {
+  background: #1D3557;
+  color: #fff;
+  text-align: center;
+  padding: 1.2rem 0;
+  font-size: 1rem;
+  margin-top: 2rem;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 900px) {
+  .impact-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+  .card {
+    width: 90%;
+    max-width: 350px;
+  }
+}
+@media (max-width: 600px) {
+  .hero {
+    height: 50vh;
+  }
+  main h1 {
+    font-size: 1.5rem;
+  }
+  .impact {
+    padding: 2rem 0.5rem;
+  }
+}
