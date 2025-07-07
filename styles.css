@@ -34,8 +34,11 @@ body, html {
 }
 
 header .logo {
-  width: 150px;
+  width: 180px;
+  max-width: 90vw;
+  height: auto;
   margin-bottom: 2rem;
+  display: block;
 }
 
 main {
@@ -106,7 +109,11 @@ main h1 {
   flex-direction: column;
   align-items: center;
 }
-.card img {
+.card img,
+.impact-img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
   border-radius: 50%;
   margin-bottom: 1rem;
 }
